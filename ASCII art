@@ -1,0 +1,45 @@
+l = 4
+h = 5
+t = 'EEE?@'
+c = []
+t = t.upper()
+for i in t:
+    c.append(i)
+a = [' #  ##   ## ##  ### ###  ## # # ###  ## # # #   # # ###  #  ##   #  ##   ## ### # # # # # # # # # # ### ### ', '# # # # #   # # #   #   #   # #  #    # # # #   ### # # # # # # # # # # #    #  # # # # # # # # # #   #   # ', '### ##  #   # # ##  ##  # # ###  #    # ##  #   ### # # # # ##  # # ##   #   #  # # # # ###  #   #   #   ## ', '# # # # #   # # #   #   # # # #  #  # # # # #   # # # # # # #    ## # #   #  #  # # # # ### # #  #  #       ', '# # ##   ## ##  ### #    ## # # ###  #  # # ### # # # #  #  #     # # # ##   #  ###  #  # # # #  #  ###  #  ']
+
+alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ?'
+
+b = []
+
+for letter in alphabet:
+    b.append(letter)
+
+words = []
+strock = []
+for i in range(h):
+    strock.append('')
+for j in c:
+    try:
+        z = b.index(j)
+    except:
+        z = b.index(b[-1])
+    for i in range(h):
+        x = a[i][l*z:l*z+4]
+        strock[i] += x
+for i in strock:
+    print(i)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
